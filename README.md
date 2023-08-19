@@ -11,6 +11,7 @@ It is important to note that this data is limited in scale as it designed to be 
 By looking at a correlation map, we can see some features that might be leading to multi colinearity. 
 ![lang](https://github.com/MaddieSmithers/Music_Recommender_System/assets/132934793/50611611-8374-4a5a-b558-dbba9d537835)
 The dataset contains about 50 different languages, with English being the largest subset. 
+
 <img width="880" alt="Screenshot 2023-08-18 at 11 03 40 PM" src="https://github.com/MaddieSmithers/Music_Recommender_System/assets/132934793/5f3b0ad7-3024-44f1-97bf-612ac8b3ab85">
 
 From about 2011, non-English music surpasses English music in popularity. The gap only continues to widen until 2020, where our data ends. 
