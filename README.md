@@ -12,7 +12,9 @@ By looking at a correlation map, we can see some features that might be leading 
 ![lang](https://github.com/MaddieSmithers/Music_Recommender_System/assets/132934793/50611611-8374-4a5a-b558-dbba9d537835)
 The dataset contains about 50 different languages, with English being the largest subset. 
 <img width="880" alt="Screenshot 2023-08-18 at 11 03 40 PM" src="https://github.com/MaddieSmithers/Music_Recommender_System/assets/132934793/5f3b0ad7-3024-44f1-97bf-612ac8b3ab85">
+
 From about 2011, non-English music surpasses English music in popularity. The gap only continues to widen until 2020, where our data ends. 
+
 ## Modeling
 This notebook runs a KMeans Clustering model to split the data into nine distinct clusters. It then uses a Random Forest Classifier to extract the most important features of each cluster. From this, we learn that the release decade is the most indicative, while language didn't play an important role in any cluster. 
 Because of this, I decided to drop all language columns before writing my content-based recommender system. By using cosine similarity and using "Where Have You Been?" by Rihanna as a sample track, the simple recommender system can identify tracks with up to 99% similarity from a variety of different languages. 
@@ -23,11 +25,14 @@ This analysis should be run on a larger dataset to better represent the massive 
 
 ## Repository Structure 
 
+
+```
 ├── notebooks
     ├── data_cleaning.ipynb
-    ├── Data_EDA.ipynb
+    ├── data_EDA.ipynb
 ├── data
     ├── tracks.csv
     ├── master_track_data.csv
 ├── README.md
+```
 
