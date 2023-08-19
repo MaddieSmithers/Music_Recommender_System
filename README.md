@@ -9,7 +9,9 @@ It is important to note that this data is limited in scale as it designed to be 
 ## Data Analysis 
 <img width="1010" alt="Screenshot 2023-08-18 at 11 01 12 PM" src="https://github.com/MaddieSmithers/Music_Recommender_System/assets/132934793/1b5b9635-7005-4b36-9744-d7c777833513">
 By looking at a correlation map, we can see some features that might be leading to multi colinearity. 
+
 ![lang](https://github.com/MaddieSmithers/Music_Recommender_System/assets/132934793/50611611-8374-4a5a-b558-dbba9d537835)
+
 The dataset contains about 50 different languages, with English being the largest subset. 
 
 <img width="880" alt="Screenshot 2023-08-18 at 11 03 40 PM" src="https://github.com/MaddieSmithers/Music_Recommender_System/assets/132934793/5f3b0ad7-3024-44f1-97bf-612ac8b3ab85">
