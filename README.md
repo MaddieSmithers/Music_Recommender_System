@@ -1,4 +1,7 @@
 # Music_Recommender_System
+
+![blocks-T3mKJXfdims-unsplash](https://github.com/MaddieSmithers/Music_Recommender_System/assets/132934793/0e9ddbaa-f0eb-4aab-ac90-edcdf8c35f82)
+
 ## Introduction
 In this project I use a dataset of about 600,000 tracks from Spotify to explore the best ways to recommend music to users. In order to combat current issues of bias in recommender systems, emerging music platforms should carefully consider which data features to emphasize or minimize in their models. By using audio data, popularity, release data, and the predicted language of each track, I explore trends in music over the last century in order to draw conclusions about what's really important to listeners. I discover that non-English music has been growing steadily in popularity since about 2011, while English music has been declining. I use a KMeans Clustering model to identify clusters in the dataset, then a Random Forest Classifier to identify the most important features in splitting the data. Through this process, I discover that langauge plays a very minor role in splitting the dataset, while the release decade appeared to have the most importance. Finally, I create a simple content-based recommender system that uses cosine similarity to recommend songs that are up 99% similar to a sample track, regardless of language. 
 ## Data Sources
@@ -30,9 +33,9 @@ This analysis should be run on a larger dataset to better represent the massive 
 
 
 ```
-├── notebooks
-    ├── data_cleaning.ipynb
-    ├── data_EDA.ipynb
+
+├── data_cleaning.ipynb
+├── data_EDA.ipynb
 ├── data
     ├── tracks.csv
     ├── master_track_data.csv
