@@ -10,22 +10,24 @@ In this project I use a dataset of about 600,000 tracks from Spotify to explore 
 ## Data Limitations
 It is important to note that this data is limited in scale as it designed to be able to run locally on most personal laptops. Furthermore, many of the audio features of tracks rely on subjective answers, such as 'danceability' or 'liveness.' Finally, the language of each track was predicted using the langdetect library, which we cannot assume works with 100% accuracy. 
 ## Data Analysis 
+First, we look at the features available to us. A correlation map shows us which features, if any, might indicate multicolinearity. As seen below, 'energy' is highly correlated with both 'loudness' and 'acousticness'
+
 <img width="1010" alt="Screenshot 2023-08-18 at 11 01 12 PM" src="https://github.com/MaddieSmithers/Music_Recommender_System/assets/132934793/1b5b9635-7005-4b36-9744-d7c777833513">
-By looking at a correlation map, we can see some features that might be leading to multi colinearity. 
+
+Next, we use the LangDetect library to create a 'predicted_language' feature. Through this, we gain insight into the spread of languages across our dataset. While English is the most frequent language present, it only makes up about 25% of the dataset.
 
 ![lang](https://github.com/MaddieSmithers/Music_Recommender_System/assets/132934793/50611611-8374-4a5a-b558-dbba9d537835)
-
-The dataset contains about 50 different languages, with English being the largest subset. 
+ 
+We can also look at trends in the data over time. As seen below, from about 2011 and on, non-English music surpasses English music in average popularity. The gap only continues to widen until 2020, where our data ends. 
 
 <img width="880" alt="Screenshot 2023-08-18 at 11 03 40 PM" src="https://github.com/MaddieSmithers/Music_Recommender_System/assets/132934793/5f3b0ad7-3024-44f1-97bf-612ac8b3ab85">
 
-From about 2011, non-English music surpasses English music in popularity. The gap only continues to widen until 2020, where our data ends. 
-
+Through our diverse dataset we learn that a worldwide audience continues to favor non-English music over English music on average. In terms of recommmender systems, this suggests that it would be beneficial for the user-experience to recommend tracks regardless of language.
 ## Modeling
 This notebook runs a KMeans Clustering model to split the data into nine distinct clusters. It then uses a Random Forest Classifier to extract the most important features of each cluster. From this, we learn that the release decade is the most indicative, while language didn't play an important role in any cluster. 
 Because of this, I decided to drop all language columns before writing my content-based recommender system. By using cosine similarity and using "Where Have You Been?" by Rihanna as a sample track, the simple recommender system can identify tracks with up to 99% similarity from a variety of different languages. 
 ## Conclusion
-While many recommender systems today continue to perpetuate bias and emphasize popular, English-language songs, newer systems that focus more on audio quality and less on language or location can provide accurate recommendations from a more diverse set of artists. Our analysis of the data shows that users are increasingly favoring non_Enlglish music, which suggests that users will likely be happy with more diverse recommendations. Because we saw the most important feature in predicting audio qualities to be the release decade, recommender systems should focus on release time features and consider also recommending playlists for different time periods. 
+While many recommender systems today continue to perpetuate bias and emphasize popular, English-language songs, newer systems that focus more on audio quality and less on language or location can provide accurate recommendations from a more diverse set of artists. Our analysis of the data shows that users are increasingly favoring non-Enlglish music, which suggests that users will likely be happy with more diverse recommendations. Because we saw the most important feature in predicting audio qualities to be the release decade, recommender systems should focus on release time features and consider also recommending playlists for different time periods.  
 ## Future Steps
 This analysis should be run on a larger dataset to better represent the massive libraries available on streaming services. It should also be paired with real user-data in order to create a hybrid model for better recommendations. 
 
@@ -33,7 +35,6 @@ This analysis should be run on a larger dataset to better represent the massive 
 
 
 ```
-
 ├── data_cleaning.ipynb
 ├── data_EDA.ipynb
 ├── data
