@@ -1,2 +1,2 @@
-/Users/madeleinesmithers/Documents/Flatiron/AAA_CAPSTONE/Music_Recommender_System/data/tracks.csv filter=lfs diff=lfs merge=lfs -text
-/Users/madeleinesmithers/Documents/Flatiron/AAA_CAPSTONE/Music_Recommender_System/data/master_track_data.csv filter=lfs diff=lfs merge=lfs -text
+data/tracks.csv filter=lfs diff=lfs merge=lfs -text
+data/master_track_data.csv filter=lfs diff=lfs merge=lfs -text
